@@ -13,7 +13,7 @@ router.post('/add',(req, res)=>{
     var customer = new CustomerModel();
     customer.customerName = req.body.customerName;
     customer.customerId = Math.ceil(Math.random() *1000000000) + "";
-    customer.save((err, docs) => {
+    customer.save((err, doc) => {
         if(!err){
 /*              res.redirect('/customer/list'); */
                res.json({ message: "successfull", status :"ok"})
