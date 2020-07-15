@@ -1,0 +1,14 @@
+<h1> Customers</h1>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+    </tr>
+    {{#each data}}
+    <tr>
+        <td>{{this.CustomerId}}</td>
+        <td>{{this.CustomerName}}</td>
+    </tr>
+    {{/each}}
+</table>
