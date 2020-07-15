@@ -6,10 +6,10 @@ const CustomerModel = mongoose.model('Customer');
 
 router.get('/list',(req, res)=>{
     //Setting
-   /*  var customer = new CustomerModel();
-    customer.CustomerName ='Tito';
-    customer.CustomerId ='2',
-    customer.save(); */
+     var customer = new CustomerModel();
+    customer.customerName ='Tito';
+    customer.customerId ='3',
+    customer.save(); 
 
     //Getting
     CustomerModel.find((err,docs)=>{
