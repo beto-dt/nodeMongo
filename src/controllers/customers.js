@@ -17,7 +17,7 @@ router.get('/list',(req, res)=>{
         {  
             console.log(docs);
 
-            res.render('List',{data : docs});
+            res.render('list',{data : docs});
         }
         else
         {
