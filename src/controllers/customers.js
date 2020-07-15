@@ -17,15 +17,13 @@ router.get('/list',(req, res)=>{
         {  
             console.log(docs);
 
-            res.render('list',{data : docs});
+            res.render('list',{ data : docs});
         }
         else
         {
             res.send("Error");
         }
     });
-
-     
 });
 
 module.exports = router;

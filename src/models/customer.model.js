@@ -1,14 +1,14 @@
 const mongoose = require('mongoose');
 
 var CustomerSchema = new mongoose.Schema({
-    CustomerName : {
+    customerName : {
         type : String,
         required : "Required"
     },
-    CustomerId : {
+    customerId : {
         type: String
     },
-    CustomerLike:{
+    customerLike:{
         type:String
     }
 });
