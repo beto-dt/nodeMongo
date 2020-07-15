@@ -1,11 +1,18 @@
-const mongoose = require('mongoose');
+const connection = require('./model');
+const express  = require('express');
+const app = express();
+const path = require('path');
+const expressHandlebars = require('express-handlebars');
+const bodyparser = require("body-parser");
 
-mongoose.connect("mongodb://localhost:27017/testdb",{useNewUrlParser:true,useUnifiedTopology:true},(error) =>{
-    if(!error){
-        console.log('Success Connected');
-    }
-    else{
-        console.log('Error connecting to database.')
-    }
+app.use(bodyparser.urlencoded({
+    extended : true
+}));
 
+app.get('/', (req, res)=>{
+    res.send('<h1>Hello World</h1>')
+});
+
+app.listen("80",() => {
+    console.log("Server stared");
 });
