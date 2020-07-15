@@ -16,8 +16,8 @@ router.get('/list',(req, res)=>{
         if(!err)
         {  
             console.log(docs);
-            
-            res.send('List',{data : docs});
+
+            res.render('List',{data : docs});
         }
         else
         {
