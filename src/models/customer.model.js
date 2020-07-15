@@ -12,5 +12,4 @@ var CustomerSchema = new mongoose.Schema({
         type:String
     }
 });
-
 mongoose.model("Customer",CustomerSchema);

@@ -16,7 +16,7 @@ router.get('/list',(req, res)=>{
         if(!err)
         {  
             console.log(docs);
-
+           
             res.render('list',{ data : docs});
         }
         else
