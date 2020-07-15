@@ -1,9 +1,11 @@
-const connection = require('./model');
+const connection = require('./models');
 const express  = require('express');
 const app = express();
 const path = require('path');
 const expressHandlebars = require('express-handlebars');
 const bodyparser = require("body-parser");
+/* Controllers */
+const CustomerController = require('./controllers/customers');
 
 app.use(bodyparser.urlencoded({
     extended : true
@@ -23,6 +25,8 @@ app.get('/', (req, res)=>{
    /*  res.send('<h1>Hello World</h1>') */
    res.render("index",{});
 });
+
+app.use('/customer',CustomerController);
 
 app.listen("80",() => {
     console.log("Server stared");
