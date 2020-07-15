@@ -1,0 +1,2 @@
+# nodeMongo
+Ambiente bajo linux 
