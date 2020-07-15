@@ -15,7 +15,8 @@ router.post('/add',(req, res)=>{
     customer.customerId = Math.ceil(Math.random() *1000000000) + "";
     customer.save((err, docs) => {
         if(!err){
-             res.redirect('/customer/list');
+/*              res.redirect('/customer/list'); */
+               res.json({ message: "successfull", status :"ok"})
         }
         else
         {
