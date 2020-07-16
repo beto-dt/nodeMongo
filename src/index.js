@@ -21,8 +21,9 @@ app.engine("hbs",expressHandlebars({
 
 app.set('view engine','hbs');
 
-app.get('/', (req, res)=>{  
-   res.render("index",CustomerController);
+app.get('/', (req, res)=>{
+   /*  res.send('<h1>Hello World</h1>') */
+   res.render("index",{});
 });
 
 app.use('/customer',CustomerController);
