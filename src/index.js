@@ -21,12 +21,9 @@ app.engine("hbs",expressHandlebars({
 
 app.set('view engine','hbs');
 
-app.get('/', (req, res)=>{
-   /*  res.send('<h1>Hello World</h1>') */
+app.get('/', (req, res)=>{  
    res.render("index",CustomerController);
 });
-
-app.use('/customer',CustomerController);
 
 app.listen("80",() => {
     console.log("Server stared");
