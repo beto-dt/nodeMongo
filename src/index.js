@@ -23,7 +23,7 @@ app.set('view engine','hbs');
 
 app.get('/', (req, res)=>{
    /*  res.send('<h1>Hello World</h1>') */
-   res.render("index",{});
+   res.render("index",CustomerController);
 });
 
 app.use('/customer',CustomerController);
