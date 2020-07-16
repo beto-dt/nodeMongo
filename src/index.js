@@ -22,7 +22,7 @@ app.engine("hbs",expressHandlebars({
 app.set('view engine','hbs');
 
 app.get('/', (req, res)=>{
-   /*  res.send('<h1>Hello World</h1>') */
+  
    res.render("index",{CustomerController});
 });
 

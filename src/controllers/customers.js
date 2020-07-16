@@ -22,7 +22,6 @@ router.post('/add',(req, res)=>{
 });
 
 router.get('/list',(req, res)=>{
-
             res.render('list');
 });
 
