@@ -25,6 +25,8 @@ app.get('/', (req, res)=>{
    res.render("index",CustomerController);
 });
 
+app.use('/customer',CustomerController);
+
 app.listen("80",() => {
     console.log("Server stared");
 });
